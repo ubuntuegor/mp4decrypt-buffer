@@ -1,8 +1,21 @@
+// @ts-check
+
 const mp4decrypt = require('..')
 const fs = require('fs')
 const path = require('path')
 const MP4Box = require('mp4box')
 
+/**
+ * Single test
+ * @typedef {Object} Test
+ * @property {string} original
+ * @property {string} encrypted
+ * @property {Record<string, string>} keys
+ */
+
+/**
+ * @type {[Test]}
+ */
 const tests = [
   {
     original: 'test1src.mp4',
@@ -28,6 +41,9 @@ async function main () {
   console.info('All tests passed!')
 }
 
+/**
+ * @param {Test} t
+ */
 async function doTest (t) {
   const src = readFile(t.original)
   const encrypted = readFile(t.encrypted)
