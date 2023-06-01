@@ -28,6 +28,11 @@ string(REGEX REPLACE "[\r\n\"]" "" NODE_ADDON_API_DIR ${NODE_ADDON_API_DIR})
 
 target_include_directories(${PROJECT_NAME} PRIVATE ${NODE_ADDON_API_DIR})
 
+if (UNIX)
+    # PIC is required for a shared library
+    set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -fPIC")
+endif (UNIX)
+
 set(BUILD_APPS OFF CACHE BOOL "Build example applications")
 add_subdirectory(Bento4)
 target_link_libraries(${PROJECT_NAME} ap4)
