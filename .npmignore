@@ -1,0 +1,13 @@
+.vscode
+.gitignore
+.gitmodules
+.github
+.lgtm.yml
+.travis.yml
+
+/build
+/test
+/Bento4/Documents
+/Bento4/Source/Java
+/Bento4/Source/Python
+/Bento4/Test
