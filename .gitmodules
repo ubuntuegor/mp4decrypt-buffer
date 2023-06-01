@@ -1,0 +1,3 @@
+[submodule "Bento4"]
+	path = Bento4
+	url = https://github.com/axiomatic-systems/Bento4
