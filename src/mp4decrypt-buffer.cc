@@ -1,5 +1,5 @@
 #include <map>
-#include "napi.h"
+#include <napi.h>
 #include "Ap4CommonEncryption.h"
 
 void CleanUp(Napi::Env env, char* data, AP4_MemoryByteStream* stream) {

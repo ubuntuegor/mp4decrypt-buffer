@@ -1,4 +1,4 @@
-const nativeModule = require('bindings')('mp4decrypt')
+const nativeModule = require('bindings')('mp4decrypt-buffer')
 
 exports.decrypt = (buffer, keyMap) => {
   return new Promise(resolve => {
